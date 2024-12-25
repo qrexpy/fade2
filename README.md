@@ -44,123 +44,63 @@ print(colored_text)
 
 ## Functions 📚
 
-### 
-
-apply_color(text, color_func)
-
-
+### `apply_color(text, color_func)`
 
 Applies a color function to the given text.
 
-### 
-
-blackwhite(text)
-
-
+### `blackwhite(text)`
 
 Applies a black and white gradient to the text.
 
-### 
-
-purplepink(text)
-
-
+### `purplepink(text)`
 
 Applies a purple to pink gradient to the text.
 
-### 
-
-greenblue(text)
-
-
+### `greenblue(text)`
 
 Applies a green to blue gradient to the text.
 
-### 
-
-pinkred(text)
-
-
+### `pinkred(text)`
 
 Applies a pink to red gradient to the text.
 
-### 
-
-purpleblue(text)
-
-
+### `purpleblue(text)`
 
 Applies a purple to blue gradient to the text.
 
-### 
-
-water(text)
-
-
+### `water(text)`
 
 Applies a water-like gradient to the text.
 
-### 
-
-fire(text)
-
-
+### `fire(text)`
 
 Applies a fire-like gradient to the text.
 
-### 
-
-brazil(text)
-
-
+### `brazil(text)`
 
 Applies a Brazil flag color gradient to the text.
 
-### 
-
-random(text)
-
-
+### `random(text)`
 
 Applies a random color gradient to the text.
 
-### 
-
-linear_blackwhite(text)
-
-
+### `linear_blackwhite(text)`
 
 Applies a linear black to white gradient to the text.
 
-### 
-
-linear_purplepink(text)
-
-
+### `linear_purplepink(text)`
 
 Applies a linear purple to pink gradient to the text.
 
-### 
-
-linear_fire(text)
-
-
+### `linear_fire(text)`
 
 Applies a linear fire gradient to the text.
 
-### 
-
-linear_custom(starthex, endhex, text)
-
-
+### `linear_custom(starthex, endhex, text)`
 
 Applies a custom linear gradient to the text using the provided start and end hex colors.
 
-### 
-
-vertical_purplepink(text)
-
-
+### `vertical_purplepink(text)`
 
 Applies a vertical purple to pink gradient to the text.
 
