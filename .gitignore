@@ -2,6 +2,7 @@
 /__pycache__
 *.py[cod]
 *$py.class
+*/__pycache__/
 
 # Distribution / packaging
 /dist/
@@ -18,6 +19,7 @@
 /.pytest_cache/
 /.coverage
 /htmlcov/
+test_*.py
 
 # Jupyter Notebook
 .ipynb_checkpoints
