@@ -4,23 +4,18 @@ A revamped version of [venaxyt's fade project](https://github.com/venaxyt/fade) 
 
 ## Features 🚀
 
-- Multiple color gradient functions:
-  - `blackwhite`
-  - `purplepink`
-  - `greenblue`
-  - `pinkred`
-  - `purpleblue`
-  - `water`
-  - `fire`
-  - `brazil`
-  - `random`
-  - `linear_blackwhite`
-  - `linear_purplepink`
-  - `linear_fire`
-  - `linear_custom`
-  - `vertical_purplepink`
-- Easy to use
+### Gradient Effects
+- **Horizontal Gradients** - color transitions across each line
+- **Linear Gradients** - smooth transitions across entire text
+- **Vertical Gradients** - different colors for each line
+- **Rainbow Effects** - smooth color spectrum transitions
+- **Animated Effects** - dynamic color animations
+
+### Technical Features
+- Easy to use API
+- Smooth color transitions using HSV color space
 - Supports ANSI escape sequences on Windows
+- Customizable gradient options
 
 ## Installation 📦
 
@@ -35,74 +30,99 @@ pip install fade2
 Here is an example of how to use Fade2 in your Python code:
 
 ```python
-from fade2 import purplepink
+from fade2 import purplepink, rainbow, pulse
 
+# Basic gradient
 text = "Hello, World!"
 colored_text = purplepink(text)
 print(colored_text)
+
+# Rainbow effect
+rainbow_text = rainbow("""
+    ╔═══════════════════════════╗
+    ║  Smooth Rainbow Gradient  ║
+    ╚═══════════════════════════╝
+""")
+print(rainbow_text)
+
+# Animation effect (clears terminal)
+pulse("This text will pulse with color!", cycles=2, delay=0.05)
 ```
 
-## Functions 📚
+## Function Reference 📚
 
-### `apply_color(text, color_func)`
+### Horizontal Gradients
 
-Applies a color function to the given text.
+These functions apply a gradient across each line of text, character by character.
 
-### `blackwhite(text)`
+| Function | Description |
+|----------|-------------|
+| `blackwhite(text)` | Black to white gradient |
+| `purplepink(text)` | Purple to pink gradient |
+| `greenblue(text)` | Green to blue gradient |
+| `pinkred(text)` | Pink to red gradient |
+| `purpleblue(text)` | Purple to blue gradient |
+| `water(text)` | Water-like blue gradient |
+| `fire(text)` | Fire-like gradient |
+| `brazil(text)` | Brazil flag colors gradient |
+| `random(text)` | Random colors for each character |
 
-Applies a black and white gradient to the text.
+### Linear Gradients
 
-### `purplepink(text)`
+These functions apply a single gradient across the entire text.
 
-Applies a purple to pink gradient to the text.
+| Function | Description |
+|----------|-------------|
+| `linear_blackwhite(text)` | Linear black to white gradient |
+| `linear_purplepink(text)` | Linear purple to pink gradient |
+| `linear_fire(text)` | Linear fire gradient |
+| `linear_custom(starthex, endhex, text)` | Custom linear gradient using hex colors |
 
-### `greenblue(text)`
+### Vertical Gradients
 
-Applies a green to blue gradient to the text.
+These functions apply different colors to each line.
 
-### `pinkred(text)`
+| Function | Description |
+|----------|-------------|
+| `vertical_purplepink(text)` | Vertical purple to pink gradient |
 
-Applies a pink to red gradient to the text.
+### Rainbow Effects
 
-### `purpleblue(text)`
+| Function | Description |
+|----------|-------------|
+| `rainbow(text)` | Smooth rainbow color spectrum across text |
 
-Applies a purple to blue gradient to the text.
+### Animated Effects
 
-### `water(text)`
+| Function | Description |
+|----------|-------------|
+| `pulse(text, cycles=3, delay=0.1)` | Creates a pulsing animation effect |
 
-Applies a water-like gradient to the text.
+## Examples
 
-### `fire(text)`
+### Rainbow Effect
+```python
+from fade2 import rainbow
 
-Applies a fire-like gradient to the text.
+banner = """
+╔═══════════════════════════════════════════════╗
+║                                               ║
+║        Fade2 - Terminal Text Gradients        ║
+║                                               ║
+╚═══════════════════════════════════════════════╝
+"""
 
-### `brazil(text)`
+print(rainbow(banner))
+```
 
-Applies a Brazil flag color gradient to the text.
+### Custom Linear Gradient
+```python
+from fade2 import linear_custom
 
-### `random(text)`
-
-Applies a random color gradient to the text.
-
-### `linear_blackwhite(text)`
-
-Applies a linear black to white gradient to the text.
-
-### `linear_purplepink(text)`
-
-Applies a linear purple to pink gradient to the text.
-
-### `linear_fire(text)`
-
-Applies a linear fire gradient to the text.
-
-### `linear_custom(starthex, endhex, text)`
-
-Applies a custom linear gradient to the text using the provided start and end hex colors.
-
-### `vertical_purplepink(text)`
-
-Applies a vertical purple to pink gradient to the text.
+# Blue to green gradient
+text = "This is a custom gradient"
+print(linear_custom("#0000FF", "#00FF00", text))
+```
 
 ## License 📄
 
