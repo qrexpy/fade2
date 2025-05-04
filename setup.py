@@ -13,7 +13,7 @@ setup(
   name="fade2",
   version="1.0.0",
   description="A sequence to venaxyt's fade project, with more features.",
-  long_description=open("README.md").read(),
+  long_description=open("README.md", encoding="utf-8").read(),
   long_description_content_type="text/markdown",
   url="https://github.com/qrexpy/fade2",  
   author="Qrexxed",
